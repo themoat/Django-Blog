@@ -1,0 +1,14 @@
+{% extends 'boards/base.html' %}
+{% block content %}
+<body>
+<h1> Home page for Boards:</h1>
+{% for post in posts %}
+    <img class= 'rounded-circle article-img' height="100px" width="100px" src = "{{ post.author.profile.image.url }}"/>
+<a class = "mr-2" href = "{% url 'post-detail' post.id %}"{{ post.title  }}
+<p>
+    <b>By:</b>{{ post.author }}<br><br>
+    {{ post.content }}<br><br> <b>posted on</b>
+    <b>{{ post.date_posted }}</b>
+</p>
+{% endfor %}
+{% endblock %}

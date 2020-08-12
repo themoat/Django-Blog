@@ -1,0 +1,12 @@
+{% extends 'boards/base.html' %}
+{% block content %}
+
+    <img class= 'rounded-circle article-img' height="100px" width="100px" src = "{{ object.author.profile.image.url }}"/>
+<h1>{{ object.title  }}</h1>
+<p>
+    <b>By:</b>{{ object.author }}<br><br>
+    {{ object.content }}<br><br> <b>posted on</b>
+    <b>{{ object.date_posted }}</b>
+</p>
+
+{% endblock %}
