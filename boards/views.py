@@ -61,8 +61,6 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 
 
-
-
 """"views are functions that receive Request as a parameter and return response as a result. Basically they 
     receive HttpRequest object and returns HttpResponse object"""
 
